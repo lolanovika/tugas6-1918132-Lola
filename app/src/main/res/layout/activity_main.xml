@@ -4,13 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D89F5A"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/button"
         android:layout_width="230dp"
         android:layout_height="71dp"
-        android:layout_centerInParent="true"
-        android:text="JALANKAN" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="257dp"
+        android:backgroundTint="#953B3B"
+        android:color="#953B3B"
+        android:text="yots" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="230dp"
+        android:layout_height="71dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp"
+        android:backgroundTint="#3B4A95"
+        android:color="#953B3B"
+        android:text="duwa" />
 
 </RelativeLayout>

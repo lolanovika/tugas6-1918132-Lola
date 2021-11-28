@@ -1,8 +1,10 @@
 package com.example.workmanager;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.work.ExistingPeriodicWorkPolicy;
 import androidx.work.ExistingWorkPolicy;
 import androidx.work.OneTimeWorkRequest;
+import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
 
 import android.os.Bundle;
@@ -22,5 +24,13 @@ public class MainActivity extends AppCompatActivity {
             WorkManager.getInstance().enqueueUniqueWork("Notifikasi", ExistingWorkPolicy.REPLACE, request);
             }
             });
+
+        final OneTimeWorkRequest request2 = new OneTimeWorkRequest.Builder(MyWorker2.class).build();
+        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                WorkManager.getInstance().enqueueUniqueWork("Notifikasi", ExistingWorkPolicy.REPLACE, request2);
+            }
+        });
     }
 }
